@@ -16,17 +16,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use('/api/v1/auth', authRouter)
-// // app.use('/api/v1/todo', TodoRoute)
-// const __dirname = path.resolve()
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/frontend/dist')))
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
-  })
-}
-
-// default route
 app.get('/', (req, res) => {
   res.send(`<h1>this is homepage baby</h1>`)
 })
