@@ -16,7 +16,10 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use('/api/v1/auth', authRouter)
-
+app.use(express.static(path.join(_dirname, '/frontend/dist')))
+app.get('*', (_, res) => {
+  res.sendFile(path.resolve(_dirname, 'frontend', 'dist', 'index.html'))
+})
 app.get('/', (req, res) => {
   res.send(`<h1>this is homepage baby</h1>`)
 })
