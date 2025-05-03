@@ -27,6 +27,7 @@
     "nodemailer": "^6.10.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
     "nodemon": "^3.1.10"
   }
 }

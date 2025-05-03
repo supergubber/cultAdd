@@ -16,8 +16,8 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use('/api/v1/auth', authRouter)
-// app.use('/api/v1/todo', TodoRoute)
-
+// // app.use('/api/v1/todo', TodoRoute)
+// const __dirname = path.resolve()
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/frontend/dist')))
 
