@@ -76,7 +76,7 @@ const DashboardPage = () => {
   }
   return (
     <div className='max-w-screen min-h-screen mx-auto bg-gray-100'>
-      <div className='w-11/12 min-h-screen bg-gray-200 mx-auto relative'>
+      <div className='w-11/12 min-h-screen bg-gray-100 mx-auto relative'>
         <div className='sticky bg-white w-full top-0 left-0 p-4 h-fit overflow-hidden'>
           <div className='flex flex-row items-end justify-between flex-wrap'>
             <form
