@@ -1,7 +1,6 @@
 const express = require('express')
 const connectDB = require('./config/db')
 require('dotenv').config()
-// const TodoRoute = require('./routes/todos')
 const authRouter = require('./routes/atuhroute')
 const cors = require('cors')
 const path = require('path')
@@ -29,11 +28,6 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
   })
 }
-
-// default route
-app.get('/', (req, res) => {
-  res.send(`<h1>this is homepage baby</h1>`)
-})
 
 app.listen(PORT, () => {
   console.log(`Server started at http://localhost:${PORT}`)

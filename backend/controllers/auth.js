@@ -1,10 +1,7 @@
 const crypto = require('crypto')
 const User = require('../models/user')
 const bcryptjs = require('bcryptjs')
-// const {
-//   sendVerificationEmail,
-//   sendWelcomeEmail,
-// } = require('../mailtrap/emails')
+
 const otpTemplate = require('../mail/templates/emailVerificationTemplate')
 
 const {
